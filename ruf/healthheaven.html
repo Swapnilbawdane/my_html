@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .hero {
+            background-image: url('image-left@2x1719999749.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content:center;
+            align-items:center;
+            color: rgb(0, 0, 0);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+
+        section {
+            padding: 40px 20px;
+            margin: 20px;
+            background-color: #f7f7f7;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #4CAF50;
+        }
+
+        section img {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-icon {
+            font-size: 36px;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        .service-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .service-list li {
+            margin: 20px 0;
+        }
+
+        .service-list li a {
+            color: #333;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .service-list li a:hover {
+            color: #4CAF50;
+        }
+
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            width: 100%;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        form button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HOSPITAL MANAGEMENT System</h1>
+            <hr>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#patients">Patient Portal</a></li>
+                <li><a href="#staff">Staff</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>Welcome to Our Health Management Web Site</h1>
+        <p>Providing the best healthcare services with advanced technology and a compassionate approach.</p>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <ul class="service-list">
+            <li>
+                <i class="fas fa-heartbeat service-icon"></i>
+                <a href="#ai-diagnosis">AI Diagnosis Assistant</a>
+            </li>
+            <li>
+                <i class="fas fa-video service-icon"></i>
+                <a href="#telemedicine">Telemedicine</a>
+            </li>
+            <li>
+                <i class="fas fa-medkit service-icon"></i>
+                <a href="#prescription-management">Prescription Management</a>
+            </li>
+            <li>
+                <i class="fas fa-heartbeat service-icon"></i>
+                <a href="#health-monitoring">Health Monitoring</a>
+            </li>
+            <li>
+                <i class="fas fa-ambulance service-icon"></i>
+                <a href="#emergency-response">Emergency Response System</a>
+            </li>
+            <!-- Add more services as needed -->
+        </ul>
+    </section>
+
+    <section id="ai-diagnosis">
+        <h2>AI Diagnosis Assistant</h2>
+        <p>Our AI Diagnosis Assistant helps doctors diagnose diseases by analyzing patient data and medical history.</p>
+        <img src="AI-in-Healthcare.jpg"  alt="ai-diagnosis">
+    </section>
+
+    <section id="telemedicine">
+        <h2>Telemedicine</h2>
+        <p>Telemedicine services enable virtual consultations between patients and healthcare providers from the comfort of their homes.</p>
+        <img src="Untitled-design-2021-05-18T203112.931.webp" alt="Telemedicine">
+    </section>
+
+    <section id="prescription-management">
+        <h2>Prescription Management</h2>
+        <p>Our system allows doctors to e-prescribe medications directly to pharmacies, ensuring quick and accurate prescription fulfillment.</p>
+        <img src="efficient-prescription-management-for-practices.jpg" alt="Prescription Management">
+    </section>
+
+    <section id="health-monitoring">
+        <h2>Health Monitoring</h2>
+        <p>Health monitoring services include smart watch integration to track health metrics such as heart rate and blood pressure.</p>
+        <img src="R.jpeg" alt="Health Monitoring">
+    </section>
+
+    <section id="emergency-response">
+        <h2>Emergency Response System</h2>
+        <p>Our emergency response system quickly mobilizes response teams and efficiently allocates resources based on real-time data.</p>
+        <img src="How-does-an-Emergency-Response-System-Work-800x500.jpg" alt="Emergency Response System">
+    </section>
+
+    <section id="patients">
+        <h2>Patient Portal</h2>
+        <p>Access your medical records, schedule appointments, and consult with doctors online.</p>
+        <form id="patient-login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
+    <section id="staff">
+        <h2>Staff Management</h2>
+        <p>Manage staff schedules, track certifications, and optimize resources.</p>
+        <!-- Additional features for staff management can be added here -->
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>For inquiries, appointments, or feedback, please reach out to us.</p>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Hospital Management System. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Example script to handle form submission (e.g., patient login)
+            const patientLoginForm = document.getElementById('patient-login-form');
+            patientLoginForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+                // Implement authentication logic here
+                alert('Login successful for user: ' + username);
+            });
+
+            // Example script to handle contact form submission
+            const contactForm = document.getElementById('contact-form');
+            contactForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+                // Implement form submission logic here
+                alert('Thank you for your message, ' + name + '!');
+            });
+        });
+    </script>
+</body>
+</html>
