@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Registration</title>
+    <style>
+        /* General styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('imageback.jpg');
+            background-size: cover; /* Ensure the background image covers the entire page */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        .form-container h2 {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .input-group {
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .input-group select {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .input-group button {
+            width: 100%;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 4px;
+            background: #6a11cb;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .input-group button:hover {
+            background: #2575fc;
+        }
+
+        .social-login {
+            margin-top: 1rem;
+        }
+
+        .social-login p {
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+
+        .social-btn {
+            width: 100%;
+            padding: 0.5rem;
+            border: none;
+            border-radius: 4px;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            color: white;
+            font-size: 1rem;
+        }
+
+        .social-btn.facebook {
+            background: #3b5998;
+        }
+
+        .social-btn.google {
+            background: #db4437;
+        }
+
+        .social-btn.twitter {
+            background: #1da1f2;
+        }
+
+        .social-btn:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="login-form">
+            <h2>Login</h2>
+            <form id="loginForm" action="/login">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <div class="social-login">
+                <p>Or login with</p>
+                <button class="social-btn facebook">Facebook</button>
+                <button class="social-btn google">Google</button>
+                <button class="social-btn twitter">Twitter</button>
+            </div>
+        </div>
+
+        <div class="signup-form" style="display: none;">
+            <h2>Sign Up</h2>
+            <form id="signupForm" action="/signup">
+                <div class="input-group">
+                    <label for="new_username">Username</label>
+                    <input type="text" id="new_username" name="new_username" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="new_password">Password</label>
+                    <input type="password" id="new_password" name="new_password" required>
+                </div>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+
+        <div class="registration-form" style="display: none;">
+            <h2>Registration</h2>
+            <form id="registrationForm" action="/register">
+                <div class="input-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" required>
+                </div>
+                <div class="input-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+                <div class="input-group">
+                    <label for="country">Country</label>
+                    <select id="country" name="country">
+                        <option value="usa">USA</option>
+                        <option value="uk">UK</option>
+                        <option value="canada">Canada</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+
+        <div class="switch-forms">
+            <button onclick="showLoginForm()">Login</button>
+            <button onclick="showSignupForm()">Sign Up</button>
+            <button onclick="showRegistrationForm()">Registration</button>
+        </div>
+    </div>
+
+    <script>
+        function showLoginForm() {
+            document.querySelector('.login-form').style.display = 'block';
+            document.querySelector('.signup-form').style.display = 'none';
+            document.querySelector('.registration-form').style.display = 'none';
+        }
+
+        function showSignupForm() {
+            document.querySelector('.login-form').style.display = 'none';
+            document.querySelector('.signup-form').style.display = 'block';
+            document.querySelector('.registration-form').style.display = 'none';
+        }
+
+        function showRegistrationForm() {
+            document.querySelector('.login-form').style.display = 'none';
+            document.querySelector('.signup-form').style.display = 'none';
+            document.querySelector('.registration-form').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

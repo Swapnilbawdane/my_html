@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> FORM </title>
+        <style>
+            body{
+                background-image: url(img.jpg);
+            }
+        </style>
+    </head>
+    <body>
+        <form action="/contact-me">
+            would you like to login in this page:<br>
+                <label for="email">User email:</label>
+                <input type="text" id="email" placeholder="enter email" required="true"><br>
+                <laybel for="password">Password</laybel>
+                <input type="password" id="user_password"><br>
+                <input type="button" value="login"><br>
+
+    or<br>
+                        <label for="id">Name:</label>
+                        <input type="text" id="id" name="user_name" placeholder="enter user name" required="true"><br>
+
+                        <label for="c">c</label>
+                        <input type="checkbox" id="c" name="language">
+
+                        <label for="c++">c++</label>
+                        <input type="checkbox" id="c++" name="language">
+
+                        <label for="html">html</label>
+                        <input type="checkbox" id="html" name="language"><br>
+
+    when you have completed this language:<br>
+                <input type="date"> date for completing first language<br>
+                <input type="date"> date for completing second language<br>
+                <input type="date"> date for completing third language<br>
+
+                <label for="languages">select the language you are goint to do future:</label>
+                <select id="language" name="languages">
+                    <option value="java">Java</option>
+                    <option value="python">Python</option>
+                    <option value="c shharp">C shharp</option>
+                    <option value="php">PHP</option>
+                    <option value="ruby">Ruby</option>
+                </select><br>
+
+    do you know any of this languages:<br>
+                <label for="yes">Yes:</label>
+                     <input type="radio" id="yes" name="conforming" value="Yes">
+                <label for="no">No:</label>
+                     <input type="radio" id="no" name="conforming" value="No"><br>
+
+                Attach certificates here: <input type="file"><br>
+                
+            <input type="submit"><br>
+
+      Type you question about this here and give feedback:<br>
+                    <textarea rows="4" cols="20"></textarea><br>
+
+
+        </form>
+    </body>
+</html>

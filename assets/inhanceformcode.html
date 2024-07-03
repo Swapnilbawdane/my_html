@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FORM</title>
+    <style>
+        body {
+            background-image: url('img.jpg');
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        form {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="date"],
+        input[type="file"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-right: 8px;
+        }
+        input[type="submit"],
+        input[type="button"] {
+            width: 100%;
+            padding: 10px;
+            background: #28a745;
+            border: none;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover,
+        input[type="button"]:hover {
+            background: #218838;
+        }
+        .form-section {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form action="/contact-me">
+        <h1>Login Form</h1>
+        
+        <div class="form-section">
+            <label for="email">User email:</label>
+            <input type="text" id="email" name="email" placeholder="Enter email" required>
+        </div>
+
+        <div class="form-section">
+            <label for="password">Password:</label>
+            <input type="password" id="user_password" name="password" placeholder="Enter password" required>
+        </div>
+
+        <div class="form-section">
+            <input type="button" value="Login">
+        </div>
+
+        <div class="form-section">
+            <h1>Registration Form</h1>
+            
+            <label for="id">Name:</label>
+            <input type="text" id="id" name="user_name" placeholder="Enter user name" required>
+            
+            <label>Programming Languages:</label>
+            <label for="c">
+                <input type="checkbox" id="c" name="language" value="c"> C
+            </label>
+            <label for="c++">
+                <input type="checkbox" id="c++" name="language" value="c++"> C++
+            </label>
+            <label for="html">
+                <input type="checkbox" id="html" name="language" value="html"> HTML
+            </label>
+        </div>
+
+        <div class="form-section">
+            <label>Dates for completing languages:</label>
+            <input type="date" name="date1"><br>
+            <input type="date" name="date2"><br>
+            <input type="date" name="date3">
+        </div>
+
+        <div class="form-section">
+            <label for="languages">Select the language you are going to do in the future:</label>
+            <select id="language" name="languages">
+                <option value="java">Java</option>
+                <option value="python">Python</option>
+                <option value="csharp">C#</option>
+                <option value="php">PHP</option>
+                <option value="ruby">Ruby</option>
+            </select>
+        </div>
+
+        <div class="form-section">
+            <label>Do you know any of these languages?</label>
+            <label for="yes">
+                <input type="radio" id="yes" name="conforming" value="Yes"> Yes
+            </label>
+            <label for="no">
+                <input type="radio" id="no" name="conforming" value="No"> No
+            </label>
+        </div>
+
+        <div class="form-section">
+            <label>Attach certificates here:</label>
+            <input type="file" name="certificate">
+        </div>
+
+        <div class="form-section">
+            <label>Type your question about this here and give feedback:</label>
+            <textarea rows="4" cols="20" name="feedback"></textarea>
+        </div>
+
+        <div class="form-section">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</body>
+</html>
